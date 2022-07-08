@@ -1,6 +1,6 @@
 import './App.css';
-
 import Expenses from './components/Expenses/Expenses';
+import NewExpense from './components/NewExpense/NewExpense';
 
 const App = () => {
   const expenses = [
@@ -25,9 +25,15 @@ const App = () => {
     },
   ];
 
+  const addExpenseHandler = (expense) => {
+    expenses.push(expense);
+    console.log(expenses);
+  };
+
   return (
     <div className='App'>
       <h2>Hello React</h2>
+      <NewExpense addExpenseHandler={addExpenseHandler} />
       <Expenses expenses={expenses} />
     </div>
   );
