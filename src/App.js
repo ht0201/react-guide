@@ -35,21 +35,11 @@ const App = () => {
     console.log(expenses);
   };
 
-  // const filterExpenseHandler = (expense) => {
-  //   setExpenses((prevExpense) => {
-  //     return [expense, ...prevExpense];
-  //   });
-  //   console.log(expenses);
-  // };
-
   return (
     <div className='App'>
       <h2>Hello React</h2>
       <NewExpense addExpenseHandler={addExpenseHandler} />
-      <Expenses
-        expenses={expenses}
-        // filterExpenseHandler={filterExpenseHandler}
-      />
+      <Expenses expenses={expenses} />
     </div>
   );
 };
